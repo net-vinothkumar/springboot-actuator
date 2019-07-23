@@ -25,5 +25,6 @@ The following table contains the available endpoints.
 
 <img width="1163" alt="Screen Shot 2019-07-23 at 06 12 42" src="https://user-images.githubusercontent.com/30971809/61682192-f56aa600-ad10-11e9-807f-3512a1a6d906.png">
 
+# Why Spring Boot Actuator ? Its Benefits ?
 
 
