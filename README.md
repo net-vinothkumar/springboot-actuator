@@ -26,7 +26,7 @@ The following table contains the available endpoints.
 <img width="1163" alt="Screen Shot 2019-07-23 at 06 12 42" src="https://user-images.githubusercontent.com/30971809/61682192-f56aa600-ad10-11e9-807f-3512a1a6d906.png">
 
 # How to enable / disable Spring Boot Actuator endpoints ?
-Actually the spring boot application endpoints can provide sensitive information, hence it should be disabled by default, if its required we shall enable it.
+Actually the spring boot application endpoints may provide sensitive information, so careful consideration should be given before enabling it.
 
 ```
 management.endpoint.health.show-details=always or never
@@ -35,6 +35,12 @@ info.app.java.target=11
 info.app.encoding=UTF-8
 info.name.of.app=Actuator Demo Application
 
+management.endpoint.<id>.enabled => can be used to enable/disable the feature
+management.endpoint.enable-by-default=false
+
+management.endpoint.web.exposure.include=health,info
+management.endpoint.web.exposure.include=* (also)
+management.endpoint.web.exposure.exclude=beans,metrics
 ```
 
 # Why Spring Boot Actuator ? Its Benefits ?
