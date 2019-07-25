@@ -1,6 +1,8 @@
 # springboot-actuator
 A sample spring boot actuator application
 
+<img width="1146" alt="Screen Shot 2019-07-25 at 07 10 57" src="https://user-images.githubusercontent.com/30971809/61847600-8d03fc00-aeab-11e9-836b-32f60c78e6c9.png">
+
 # What is Spring Boot Actuator ?
 Spring Boot provides actuator to monitor and manage our application. Actuator is a tool which has HTTP endpoints. when application is pushed to production, you can choose to manage and monitor your application using HTTP endpoints.
 
