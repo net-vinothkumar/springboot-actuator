@@ -45,6 +45,13 @@ management.endpoint.web.exposure.exclude=beans,metrics
 
 # Why Spring Boot Actuator ? Its Benefits ?
 
+1. It allows us to monitor our application
+2. To gather the application’s metrics
+3. Understand the real traffic
+4. We can get the production grade tools via the HTTP end points, by making use of these we can get the above information and 5. we are also free to configure and extend these features in many ways.
+6. Easy to implement the custom metrics for an application and expose as an HTTP endpoints.
+7. The actuator endpoints are secured, hence application's sensitive information are protected.
+
 # How to write custom endpoints ?
 
 
