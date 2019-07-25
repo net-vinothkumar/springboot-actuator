@@ -26,6 +26,18 @@ The following table contains the available endpoints.
 <img width="1163" alt="Screen Shot 2019-07-23 at 06 12 42" src="https://user-images.githubusercontent.com/30971809/61682192-f56aa600-ad10-11e9-807f-3512a1a6d906.png">
 
 # How to enable / disable Spring Boot Actuator endpoints ?
+By default, all endpoints except for shutdown are enabled. To configure the enablement of an endpoint, use its management.endpoint.<id>.enabled property. The following example enables the shutdown endpoint:
+
+```
+management.endpoint.shutdown.enabled=true    
+```
+If you prefer endpoint enablement to be opt-in rather than opt-out, set the management.endpoints.enabled-by-default property to false and use individual endpoint enabled properties to opt back in. The following example enables the info endpoint and disables all other endpoints:
+
+```
+management.endpoints.enabled-by-default=false
+management.endpoint.info.enabled=true
+```
+
 Actually the spring boot application endpoints may provide sensitive information, so careful consideration should be given before enabling it.
 
 ```
@@ -53,7 +65,10 @@ management.endpoint.web.exposure.exclude=beans,metrics
 6. Easy to implement the custom metrics for an application and expose as an HTTP endpoints.
 7. The actuator endpoints are secured, hence application's sensitive information are protected.
 
-more details : https://docs.spring.io/spring-boot/docs/2.2.0.BUILD-SNAPSHOT/reference/html/production-ready-features.html
+more details : 
+https://docs.spring.io/spring-boot/docs/2.2.0.BUILD-SNAPSHOT/reference/html/production-ready-features.html
+https://dzone.com/articles/spring-boot-autoscaler
+http://www.codebelay.com/blog/2009/08/02/how-to-load-balance-and-auto-scale-with-amazons-ec2/
 
 # How to write custom endpoints ?
 
