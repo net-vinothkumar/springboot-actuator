@@ -54,4 +54,21 @@ management.endpoint.web.exposure.exclude=beans,metrics
 
 # How to write custom endpoints ?
 
+Spring also provides adding custom endpoints if you have any application specific feature that you want to exapose and monitor. Just add a @Bean annotated with @Endpoint, In this class any methods annotated with @ReadOperation, @WriteOperation, or @DeleteOperation are automatically exposed over JMX and, in a web application, over HTTP as well. Endpoints can be exposed over HTTP using Jersey, Spring MVC, or Spring WebFlux.
+
+```
+@Component
+@Endpoint(id = "customFeatures")
+public class CustomFeatureEndpoint {
+
+    private Map<String, Object> features = new ConcurrentHashMap<>();
+
+    @ReadOperation
+    public Map<String, Object> customFeatues(){
+        features.put("customFeature", "sample custom metric from the application");
+        return features;
+    }
+}
+```
+
 
