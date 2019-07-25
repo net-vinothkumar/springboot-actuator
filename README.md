@@ -53,6 +53,8 @@ management.endpoint.web.exposure.exclude=beans,metrics
 6. Easy to implement the custom metrics for an application and expose as an HTTP endpoints.
 7. The actuator endpoints are secured, hence application's sensitive information are protected.
 
+more details : https://docs.spring.io/spring-boot/docs/2.2.0.BUILD-SNAPSHOT/reference/html/production-ready-features.html
+
 # How to write custom endpoints ?
 
 Spring also provides adding custom endpoints if you have any application specific feature that you want to exapose and monitor. Just add a @Bean annotated with @Endpoint, In this class any methods annotated with @ReadOperation, @WriteOperation, or @DeleteOperation are automatically exposed over JMX and, in a web application, over HTTP as well. Endpoints can be exposed over HTTP using Jersey, Spring MVC, or Spring WebFlux.
