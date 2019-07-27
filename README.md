@@ -91,4 +91,10 @@ public class CustomFeatureEndpoint {
 }
 ```
 
+# Using a different management port for actuator : 
 
+http://localhost:9000/actuator/health
+
+```
+management.server.port=9000
+```
