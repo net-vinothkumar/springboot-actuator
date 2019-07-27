@@ -85,7 +85,7 @@ public class CustomFeatureEndpoint {
 
     @ReadOperation
     public Map<String, Object> customFeatues(){
-        features.put("customFeature", "sample custom metric from the application");
+        features.put("customFeature", "example - customer bought the product using premium account.");
         return features;
     }
 }
