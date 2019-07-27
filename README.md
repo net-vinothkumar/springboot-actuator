@@ -1,5 +1,5 @@
 # springboot-actuator
-A sample spring boot actuator application
+"Production Ready Endpoints To Monitor Your Application"
 
 <img width="1146" alt="Screen Shot 2019-07-25 at 07 10 57" src="https://user-images.githubusercontent.com/30971809/61847600-8d03fc00-aeab-11e9-836b-32f60c78e6c9.png">
 
